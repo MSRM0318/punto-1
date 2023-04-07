@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+}
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #3caa36 50%, rgb(52, 196, 52) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+  .l{
+    color: #2e4d2d;
+  }
+  .m{
+    color: #3a7537;
+  }
+  .hr{
+    border-color: #36ca2f93;
+  }  
+.ol{
+ background-color: rgba(0, 0, 0, 0);
+ color: rgba(0, 0, 0, 0);
+}
+html{
+    display: grid;
+    place-items: center;
+}
+
+section {
+	position:fixed;
+	width:145%;
+	height:100%;
+	top:0;
+	left:0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.reloj {
+	display:inline-block;
+	background:#38c13100;
+	color:#347b30;
+	padding:30px;
+	font-weight:bold;
+	font-size:40px;
+	border-radius:4px;
+	border: 4px solid #35903000;
+	box-shadow: -8px -8px 15px #347b30,
+				10px 10px 10px #347b30,
+				inset -8px -8px 15px #0dff0070,
+				inset 10px 10px 10px #0dff0070;
+}
+.font {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #31b22a, #51fb95, #2cc824);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #31d729;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #3ba936;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #3ba936;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #31d729;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label .ro{
+  top: -20px;
+  left: 0;
+  color: #347b30;
+  font-size: 12px;
+
+}
+
+.login-box form a .ro{
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #29d920;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+  
+}
+
+.login-box a:hover .ro{
+  background: #3ba936;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 0 5px #3ba936,
+              0 0 25px #3ba936,
+              0 0 50px #3ba936,
+              0 0 100px #3ba936;
+}
+
+.login-box a span .ro{
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) .ro{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3ba936);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) .ro{
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #3ba936);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) .ro{
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #3ba936);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) .ro{
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #3ba936);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+}
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: #347b30;
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.cta span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #ffffff;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  background: #38a932;
+}
+.cta:hover svg {
+  transform: translateX(0);
+}
+.cta:active {
+  transform: scale(0.96);
+}
+.h{
+  color: white;
+}
+.square {
+  position: relative;
+  margin: 0 10px;
+  width: 300px; height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square span:nth-last-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+  transition: 0.5s;
+  animation: animate 6s linear infinite;
+}
+.twitch:hover span:nth-child(1) {
+border: none;
+background-image: url(https://i.pinimg.com/originals/60/04/30/600430c1d22c731b94cf4e7dae6b398a.gif);
+}
+.square span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: animate 6s linear infinite;
+  
+}
+.twitch:hover span:nth-child(2) {
+  border: none;
+  background-image: url(https://i.pinimg.com/originals/60/04/30/600430c1d22c731b94cf4e7dae6b398a.gif);
+}
+.square span:nth-child(3){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
+  transition: 0.5s;
+  animation: animate2 10s linear infinite;
+}
+.twitch:hover span:nth-child(3) {
+border: none;
+background-image: url(https://i.pinimg.com/originals/60/04/30/600430c1d22c731b94cf4e7dae6b398a.gif);
+}
+.content {
+  position: relative;
+  padding: 40px 60px;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1000;
+}
+.square :hover {
+  color: white;
+}
+.content a {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  border: 2px solid #ffffff;
+  padding: 6px 18px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+}
+.content:hover{
+  color: #ffffff;
+}
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+#darkmode{
+  display: inline-block;
+  width: 99px;
+  height: 40px;
+  font-size: 0;
+  text-decoration: none;
+}
+.check {
+  width:35px;
+  height:35px;
+
+  }
+html.dark-mode{
+  filter: (100%);
+  position: relative;
+  width: 9px;
+  height: 4px;
+  top: 1%;
+  background-image: url(https://thumbs.dreamstime.com/b/fondo-sim%C3%A9trico-enrrollado-tribal-psicod%C3%A9lico-p%C3%A1gina-que-colorea-para-los-adultos-ilustraci%C3%B3n-del-vector-144631740.jpg);
+}
+html.dark-mode img{
+  filter: invert(100%);
+  background: linear-gradient(90deg, #000000, #000000, #000000);
+
+}
+
